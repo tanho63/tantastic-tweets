@@ -1,0 +1,28 @@
+.wrapper {
+    max-width: 566px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    margin: 1rem;
+    display: block;
+}
+
+body {
+    background-color: white;
+}
+
+.search-bar > form {
+    margin-top: 0;
+}
+
+h1,.tweet-header,.tweet-stats {
+  font-family: "Space Mono", sans-serif;
+}
+
+.tweet-content {
+  font-family: "Space Mono", sans-serif;
+}
+
