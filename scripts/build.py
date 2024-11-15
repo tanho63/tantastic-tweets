@@ -19,7 +19,7 @@ def short_date(created_at):
 
 
 def url(item):
-    return "https://twitter.com/_TanHo/status/" + item["id_str"]
+    return "./_TanHo/status/" + item["id_str"]
 
 def get_page(item):
     date = short_date(item["created_at"])
@@ -30,6 +30,9 @@ def get_page(item):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>tantastic tweets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../nitter.css">
   <link rel="stylesheet" href="../../../twitter.css">
   <link rel="stylesheet" href="../../../fonts/css/fontello.css">

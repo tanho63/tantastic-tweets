@@ -57,7 +57,7 @@ const app = Vue.createApp({
             return "./_TanHo/status/" + item.id_str;
         },
         twitter_url(item) {
-            return "#";
+            return "./_TanHo/status/" + item.id_str;
         },
     }
 })
