@@ -20,8 +20,8 @@ so I updated all `https://twitter.com/_TanHo/status/*` link references to point 
   - [scripts/build.py](https://github.com/tanho63/tantastic-tweets/blob/7b72d0be1f6654095954184a12b8b06615fc150d/scripts/build.py#L51-L53) to add font preload to each individual tweet page
   - [styles.css](https://github.com/tanho63/tantastic-tweets/blob/7b72d0be1f6654095954184a12b8b06615fc150d/styles.css#L21-L27) to update the CSS classes to use Space Mono as the main font + sans-serif as fallback.
 
-- I noticed that twitter handles didn't hyperlink anymore, so I ran a crude regex replace, something like: replace `@(\w+)` with `<a href=\"https://twitter.com/\1\">\1</a>`, so that it would hyperlink to users.
-  - I've noticed since that a few places that `@xyz` were used inside URLs rather than as user references (i.e. Mastodon, Medium links) are now broken. Whoops. That probably should have been `^@(\w+)` for the pattern-find.
+- I noticed that twitter handles didn't hyperlink to the users anymore, so I ran a crude regex replace on `searchDocuments.js`, something like: replacing `@(\w+)` with `<a href=\"https://twitter.com/\1\">\1</a>`
+  - I've noticed since that a few places that `@xyz` were used inside URLs rather than as user references (i.e. Mastodon, Medium links) are now broken. Whoops. That probably could have been `[\s\b]@(\w+)` for the pattern-find?
 
 - I hand-edited the latest tweet's text contents to add a link to Bluesky, and updated the date to Nov 14 instead of Jan 23 ish which was the actual date of that tweet.
 
