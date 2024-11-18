@@ -26,7 +26,7 @@ so I updated all `https://twitter.com/_TanHo/status/*` link references to point 
 - I hand-edited the latest tweet's text contents to add a link to Bluesky, and updated the date to Nov 14 instead of Jan 23 ish which was the actual date of that tweet.
   - Also deleted a few stray replies that appeared at the top of the timeline that I was annoyed was there, but didn't go much further than the top part of the timeline.
 
-- Added meta tags so that discord embeds were nicer. 
+- Added meta tags so that embedding is nicer. 
 
 ## things i want to do but dunno if i want to spend the time on
 - figure out how to link reply tweets to the original? or retrieve the original tweet and include it in the status page somehow? debateable how valuable that would be.
