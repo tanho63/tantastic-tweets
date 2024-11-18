@@ -41,6 +41,5 @@ so I updated all `https://twitter.com/_TanHo/status/*` link references to point 
 - `app.js` does the bulk of the lifting, parsing `searchDocuments.js` into the homepage timeline and adding the search functionality (via `js/minisearch.min.js`)
 - `index.html` incorporates app.js and an html template to hold the actual timeline contents that app.js will build client-side.
 - `scripts/build.py` parses `searchDocuments.js` and generates one html file per tweet in the appropriate tweet directory, e.g. `/_TanHo/status/1234/index.html` based on the template stored inside `scripts/build.py`
-
- 
+  - If you make a change to a tweet in `searchDocuments.js`, `index.html` will show the change right away, but the individual tweet's direct link will not update until you rerun `scripts/build.py`. 
 
