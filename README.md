@@ -24,13 +24,15 @@ so I updated all `https://twitter.com/_TanHo/status/*` link references to point 
   - I've noticed since that a few places that `@xyz` were used inside URLs rather than as user references (i.e. Mastodon, Medium links) are now broken. Whoops. That probably could have been `[\s\b]@(\w+)` for the pattern-find?
 
 - I hand-edited the latest tweet's text contents to add a link to Bluesky, and updated the date to Nov 14 instead of Jan 23 ish which was the actual date of that tweet.
+  - Also deleted a few stray replies that appeared at the top of the timeline that I was annoyed was there, but didn't go much further than the top part of the timeline.
 
-- Also deleted a few stray replies that appeared at the top of the timeline that I was annoyed was there. 
+- Added meta tags so that discord embeds were nicer. 
 
 ## things i want to do but dunno if i want to spend the time on
 - figure out how to link reply tweets to the original? or retrieve the original tweet and include it in the status page somehow? debateable how valuable that would be.
 - fix that broken link bug I introduced trying to hyperlink back to twitter users
 - figure out a user-facing sort-by option rather than just "newest to oldest"
+- figure out how to get all the main customizations into a config file setup
 
 ## how i think this thing works
 (not 100% confident on these notes because have never really worked with vue/js, might be helpful for non-JS/non-py users)
