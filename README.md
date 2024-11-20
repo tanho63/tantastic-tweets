@@ -26,14 +26,13 @@ so I updated all `https://twitter.com/_TanHo/status/*` link references to point 
 - I hand-edited the latest tweet's text contents to add a link to Bluesky, and updated the date to Nov 14 instead of Jan 23 ish which was the actual date of that tweet.
   - Also deleted a few stray replies that appeared at the top of the timeline that I was annoyed was there, but didn't go much further than the top part of the timeline.
 
-- Added meta tags so that embedding is nicer. 
+- Added meta tags so that embedding is nicer, and made sure that the meta description showed a plaintext version of the tweet so it could be read when embedded elsewhere
 
 ## things i want to do but dunno if i want to spend the time on
 - figure out how to link reply tweets to the original? or retrieve the original tweet and include it in the status page somehow? debateable how valuable that would be.
 - fix that broken link bug I introduced trying to hyperlink back to twitter users
 - figure out a user-facing sort-by option rather than just "newest to oldest"
 - figure out how to get all the main customizations into a config file setup
-- get meta tag description to show a plaintext version of the tweet so people can read it when embedded elsewhere without clicking through
 
 ## how i think this thing works
 (not 100% confident on these notes because have never really worked with vue/js, might be helpful for non-JS/non-py users)
