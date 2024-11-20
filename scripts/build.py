@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 import os
-
+from re import sub
 
 def read_data():
     start = "const searchDocuments ="
@@ -10,13 +10,18 @@ def read_data():
         data = json.loads(data)
     return data
 
-
 def short_date(created_at):
     date = datetime.strptime(created_at, "%a %b %d %H:%M:%S %z %Y")
     if date.year == datetime.now().year:
         return date.strftime("%b %d")
     return date.strftime("%b %d, %Y")
 
+def strip_html(x):
+    # swap <br> with space
+    x_nobr = sub(pattern = r"<br>", repl = " ", string = x)
+    # remove all other html tags
+    x_out = sub(pattern = r"<(.|\n)*?>", repl = "", string = x_nobr)
+    return x_out
 
 def url(item):
     return "./_TanHo/status/" + item["id_str"]
@@ -29,10 +34,10 @@ def get_page(item):
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
-<meta name="description" content="tantastic (and/or terrible) tweets archived from @_TanHo&#39;s twitter account before deleting in Nov 2024"/>
+<meta name="description" content="{strip_html(item['full_text'])}"/>
 <meta name="github-repo" content="tanho63/tantastic-tweets"/>
 <meta name="twitter:title" content="tantastic tweets"/>
-<meta name="twitter:description" content="tantastic (and/or terrible) tweets archived from @_TanHo&#39;s twitter account before deleting in Nov 2024"/>
+<meta name="twitter:description" content="{strip_html(item['full_text'])}"/>
 <meta name="twitter:url" content="https://tweets.tanho.ca"/>
 <meta name="twitter:image" content="https://tweets.tanho.ca/profile.jpg"/>
 <meta name="twitter:image:alt" content="Profile picture of Tan, pictured with childhood hero Jerome Bettis"/>
@@ -40,7 +45,7 @@ def get_page(item):
 <meta name="twitter:creator" content="@_TanHo"/>
 <meta name="twitter:site" content="@_TanHo"/>
 <meta property="og:title" content="tantastic tweets"/>
-<meta property="og:description" content="tantastic (and/or terrible) tweets archived from @_TanHo&#39;s twitter account before deleting in Nov 2024"/>
+<meta property="og:description" content="{strip_html(item['full_text'])}"/>
 <meta property="og:url" content="https://tweets.tanho.ca"/>
 <meta property="og:image" content="https://tweets.tanho.ca/profile.jpg"/>
 <meta property="og:image:alt" content="Profile picture of Tan, pictured with childhood hero Jerome Bettis"/>
