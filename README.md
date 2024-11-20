@@ -33,6 +33,7 @@ so I updated all `https://twitter.com/_TanHo/status/*` link references to point 
 - fix that broken link bug I introduced trying to hyperlink back to twitter users
 - figure out a user-facing sort-by option rather than just "newest to oldest"
 - figure out how to get all the main customizations into a config file setup
+- get meta tag description to show a plaintext version of the tweet so people can read it when embedded elsewhere without clicking through
 
 ## how i think this thing works
 (not 100% confident on these notes because have never really worked with vue/js, might be helpful for non-JS/non-py users)
