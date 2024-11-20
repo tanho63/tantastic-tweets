@@ -12,8 +12,6 @@ def read_data():
 
 def short_date(created_at):
     date = datetime.strptime(created_at, "%a %b %d %H:%M:%S %z %Y")
-    if date.year == datetime.now().year:
-        return date.strftime("%b %d")
     return date.strftime("%b %d, %Y")
 
 def strip_html(x):
@@ -33,26 +31,26 @@ def get_page(item):
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
-<meta name="description" content="{strip_html(item['full_text'])}"/>
-<meta name="github-repo" content="tanho63/tantastic-tweets"/>
-<meta name="twitter:title" content="tantastic tweets"/>
-<meta name="twitter:description" content="{strip_html(item['full_text'])}"/>
-<meta name="twitter:url" content="https://tweets.tanho.ca"/>
-<meta name="twitter:image" content="https://tweets.tanho.ca/profile.jpg"/>
-<meta name="twitter:image:alt" content="Profile picture of Tan, pictured with childhood hero Jerome Bettis"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:creator" content="@_TanHo"/>
-<meta name="twitter:site" content="@_TanHo"/>
-<meta property="og:title" content="tantastic tweets"/>
-<meta property="og:description" content="{strip_html(item['full_text'])}"/>
-<meta property="og:url" content="https://tweets.tanho.ca"/>
-<meta property="og:image" content="https://tweets.tanho.ca/profile.jpg"/>
-<meta property="og:image:alt" content="Profile picture of Tan, pictured with childhood hero Jerome Bettis"/>
-<meta property="og:type" content="website"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="article:author" content="Tan Ho"/>
-  <title>tantastic tweets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
+  <meta name="github-repo" content="tanho63/tantastic-tweets"/>
+  <meta name="description" content="{strip_html(item['full_text'])}"/>
+  <meta name="twitter:title" content="tantastic tweets ({date})"/>
+  <meta name="twitter:description" content="{strip_html(item['full_text'])}"/>
+  <meta name="twitter:url" content="https://tweets.tanho.ca"/>
+  <meta name="twitter:image" content="https://tweets.tanho.ca/profile.jpg"/>
+  <meta name="twitter:image:alt" content="Profile picture of Tan, pictured with childhood hero Jerome Bettis"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:creator" content="@_TanHo"/>
+  <meta name="twitter:site" content="@_TanHo"/>
+  <meta property="og:title" content="tantastic tweets ({date})"/>
+  <meta property="og:description" content="{strip_html(item['full_text'])}"/>
+  <meta property="og:url" content="https://tweets.tanho.ca"/>
+  <meta property="og:image" content="https://tweets.tanho.ca/profile.jpg"/>
+  <meta property="og:image:alt" content="Profile picture of Tan, pictured with childhood hero Jerome Bettis"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="article:author" content="Tan Ho"/>
+  <title>tantastic tweets ({date})</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -64,7 +62,6 @@ def get_page(item):
 <body>
   <div class="wrapper" id="app">
     <h1><a href="../../..">tantastic tweets</a></h1>
-
     <div class="timeline">
       <div class="timeline-item">
         <a class="tweet-link" href="{url(item)}"></a>
