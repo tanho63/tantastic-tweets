@@ -28,6 +28,8 @@ so I updated all `https://twitter.com/_TanHo/status/*` link references to point 
 
 - Added meta tags so that embedding is nicer, and made sure that the meta description showed a plaintext version of the tweet so it could be read when embedded elsewhere
 
+- Stored tweets as a parquet for myself to search later
+
 ## things i want to do but dunno if i want to spend the time on
 - figure out how to link reply tweets to the original? or retrieve the original tweet and include it in the status page somehow? debateable how valuable that would be.
 - fix that broken link bug I introduced trying to hyperlink back to twitter users
